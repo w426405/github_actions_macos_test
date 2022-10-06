@@ -17,7 +17,7 @@ jobs:
             tar -xJf llvm-project-15.0.2.src.tar.xz
             ls -laF
             cd llvm-project-15.0.2.src
-            sed -i "s/liblldb SHARED/liblldb STATIC/g" lldb/source/API/CMakeLists.txt
+            sed -i '' -e "s/liblldb SHARED/liblldb STATIC/g" lldb/source/API/CMakeLists.txt
             cat lldb/source/API/CMakeLists.txt
 
       - name: Configure qt
