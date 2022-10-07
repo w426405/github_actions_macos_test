@@ -19,6 +19,11 @@ jobs:
             cd llvm-project-15.0.2.src
             sed -i '' -e "s/liblldb SHARED/liblldb STATIC/g" lldb/source/API/CMakeLists.txt
             cat lldb/source/API/CMakeLists.txt
+            
+      - name: Setup Ninja
+        uses: ashutoshvarma/setup-ninja@master
+        with:
+          version: 1.10.0
 
       - name: Configure qt
         working-directory: ${{github.workspace}}
