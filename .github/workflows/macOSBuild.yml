@@ -57,20 +57,20 @@ jobs:
       - name: Pack files
         working-directory: ${{github.workspace}}
         run: |
-            &7z a lldb lldb.7z
-            &7z a qt qt.7z
+            tar -cJf lldb.tar.xz lldb
+            tar -cJf qt.tar.xz qt
 
       - uses: actions/upload-artifact@v2
         with:
           path: |
-              *.7z
+              *.tar.xz
 
       - uses: xresloader/upload-to-github-release@v1
         if: contains(github.ref, 'tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: "*.7z"
+          file: "*.tar.xz"
           overwrite: true
           tags: true
           draft: false
