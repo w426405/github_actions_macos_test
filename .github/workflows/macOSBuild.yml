@@ -24,7 +24,7 @@ jobs:
         working-directory: ${{github.workspace}}
         run: |
             cd qt-everywhere-src-6.2.4
-            ./configure -prefix ${{github.workspace}}/qt -opensource -confirm-license -release -static -no-pch -no-dbus -no-gssapi -gui -nomake examples -nomake tests -skip qtconnectivity -skip qtdeclarative -skip qtlocation -skip qtmultimedia -skip qtquick1 -skip qtquickcontrols -skip qtsensors -skip qtdoc -skip qtlottie -skip qtmqtt -skip qtopcua -skip qtquicktimeline -skip qtquick3d -skip qtscxml -skip qtvirtualkeyboard -skip qtwebengine -skip qtwebview -skip qt3d -skip qtserialbus --webp=qt --tiff=qt
+            ./configure -prefix ${{github.workspace}}/qt -opensource -confirm-license -release -static -no-pch -no-dbus -no-feature-gssapi -gui -nomake examples -nomake tests -skip qtconnectivity -skip qtdeclarative -skip qtlocation -skip qtmultimedia -skip qtquick1 -skip qtquickcontrols -skip qtsensors -skip qtdoc -skip qtlottie -skip qtmqtt -skip qtopcua -skip qtquicktimeline -skip qtquick3d -skip qtscxml -skip qtvirtualkeyboard -skip qtwebengine -skip qtwebview -skip qt3d -skip qtserialbus --webp=qt --tiff=qt
 
       - name: Build qt
         working-directory: ${{github.workspace}}
