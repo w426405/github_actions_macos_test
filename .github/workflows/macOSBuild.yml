@@ -28,7 +28,6 @@ jobs:
 
       - name: Make dir
         working-directory: ${{github.workspace}}
-        shell: cmd
         run: |
           mkdir out
           mkdir build
@@ -64,7 +63,6 @@ jobs:
 
       - name: Build XingDBG
         working-directory: ${{github.workspace}}
-        shell: cmd
         run: |
           cd build
           mkdir XingDBG
