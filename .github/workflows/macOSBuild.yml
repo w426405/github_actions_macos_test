@@ -28,7 +28,6 @@ jobs:
 
       - name: Make dir
         working-directory: ${{github.workspace}}
-        shell: cmd
         run: |
           mkdir out
           mkdir build
