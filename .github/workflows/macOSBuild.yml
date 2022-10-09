@@ -63,7 +63,6 @@ jobs:
 
       - name: Build XingDBG
         working-directory: ${{github.workspace}}
-        shell: cmd
         run: |
           cd build
           mkdir XingDBG
